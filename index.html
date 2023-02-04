@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+  <hr>
   <form action="registrardatos.php" method="post">
     <fieldset>
       <legend>Datos personales</legend>
@@ -27,6 +27,37 @@
     <input type="text" value="453-" name="telefono" size="15"><br>
     <textarea name="comentarios" rows="5" cols="40">Ingrese aqui     sus comentarios</textarea><br>
     <input type="submit" value="Enviar">
+  </form>
+  <form class="contact_form" action="#" id="contact_form" runat="server">
+    <div>
+      <ul>
+        <li>
+          <h2>Contactos</h2>
+          <span class="required_notification">* Datos requeridos</span>
+        </li>
+        <li>
+          <label for="name">Nombre:</label>
+          <input type="text" placeholder="John Doe" required />
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <input type="email" name="email" placeholder="info@developerji.com" required />
+          <span class="form_hint">Formato correcto: "name@something.com"</span>
+        </li>
+        <li>
+          <label for="website">Sitio web:</label>
+          <input type="url" name="website" placeholder="http://developerji.com" required pattern="(http|https)://.+" />
+          <span class="form_hint">Formato correcto: "http://developerji.com"</span>
+        </li>
+        <li>
+          <label for="message">Mensaje:</label>
+          <textarea name="message" cols="40" rows="6" required></textarea>
+        </li>
+        <li>
+          <button class="submit" type="submit">Enviar mensaje</button>
+        </li>
+      </ul>
+    </div>
   </form>
 
   <form action="registrardatos.php" method="post">
